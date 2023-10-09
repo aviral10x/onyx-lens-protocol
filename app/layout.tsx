@@ -197,7 +197,7 @@ function Nav() {
             <ChevronRight className="h-4 w-4" />
           </Button>
         )}
-        {isInstalled ? null : (
+        {/* {isInstalled ? null : (
           <Button
             onClick={addToHomeScreen}
             variant="secondary"
@@ -206,7 +206,7 @@ function Nav() {
             Add to Screen
             <ArrowBigDownDash className="h-4 w-4" />
           </Button>
-        )}
+        )} */}
         {wallet && (
           <Button onClick={logout} variant="secondary" className="mr-4">
             Disconnect

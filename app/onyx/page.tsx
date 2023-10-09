@@ -8,6 +8,11 @@ import {
   KeyDIDMethod,
   createAndSignCredentialJWT,
 } from "@jpmorganchase/onyx-ssi-sdk";
+import {
+  useActiveProfile,
+  useProfileFollowers,
+  ProfileId,
+} from "@lens-protocol/react-web";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -19,6 +24,8 @@ interface PageProps {
   childComponent: React.ReactNode;
 }
 function Home() {
+  const { data: profile } = useActiveProfile();
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const getOnyxCredentials = async () => {
     const didKey = new KeyDIDMethod();
@@ -108,12 +115,22 @@ function Home() {
               </button>
               <dialog id="my_modal_2" className="modal">
                 <div className="modal-box">
+                  {profile?.picture?.__typename === "MediaSet" && (
+                    <img
+                      src={profile?.picture?.original?.url}
+                      className="rounded w-[200px]"
+                    />
+                  )}
                   <h3 className="font-bold text-lg">
-                    You have more than 3 followers{" "}
+                    <span>
+                      You have&nbsp;
+                      {profile?.stats.totalFollowers} followers
+                    </span>
                   </h3>
                   <p className="py-4">
                     You are eligble to get onyx credentials
                   </p>
+
                   <button
                     onClick={getOnyxCredentials}
                     className="btn btn-neutral"
