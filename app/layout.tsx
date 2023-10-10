@@ -152,21 +152,21 @@ function Nav() {
           <p className={`ml-2 mr-4 text-lg font-semibold`}>lenspwa</p>
         </Link>
         <Link
-          href="/"
-          className={`mr-5 text-sm ${pathname !== "/" && "opacity-50"}`}
+          href="/vote"
+          className={`mr-5 text-sm ${pathname !== "/vote" && "opacity-50"}`}
         >
-          <p>Home</p>
+          <p>Vote</p>
         </Link>
         <Link
-          href="/search"
-          className={`mr-5 text-sm ${pathname !== "/search" && "opacity-60"}`}
+          href="/build"
+          className={`mr-5 text-sm ${pathname !== "/build" && "opacity-90"}`}
         >
-          <p>Search</p>
+          <p>Submit your Buidl</p>
         </Link>
         {wallet && (
           <Link
-            href="/profile"
-            className={`mr-5 text-sm ${pathname !== "/search" && "opacity-60"}`}
+            href="/vote"
+            className={`mr-5 text-sm ${pathname !== "/vote" && "opacity-60"}`}
           >
             <p>Profile</p>
           </Link>
