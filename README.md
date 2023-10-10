@@ -1,7 +1,7 @@
-## LensOnyx
+## OnyxDAO
 
-LensOnyx is a platform that helps people create on-chain developer communities on Lens Protocol and leverages Onyx for Verifiable Credentials.
-People/Companies with good on-chain reputation on Lens Protocol can create their communities using LensOnyx. Participants in these on-chain communities will receive verifiable credentials that are issued using Onyx. Participants will have to collect these Verifiable Credentials to unlock other benefits.
+OnyxDAO is a platform that helps people create on-chain developer communities on Lens Protocol and leverages Onyx for Verifiable Credentials.
+People/Companies with good on-chain reputation on Lens Protocol can create their communities using OnyxDAO. Participants in these on-chain communities will receive verifiable credentials that are issued using Onyx. Participants will have to collect these Verifiable Credentials to unlock other benefits.
 
 ## Problem
 
@@ -11,7 +11,7 @@ People/Companies with good on-chain reputation on Lens Protocol can create their
 
 ## Solution
 
-- **Seamless Onboarding:** With just a single click of a button, users can easily onboard onto the LensOnyx platform and can access developer communities.
+- **Seamless Onboarding:** With just a single click of a button, users can easily onboard onto the OnyxDAO platform and can access developer communities.
 - **Credential Issuance:**
 - **Verifiable Credentials** Developers will get Verifiable Credentials on completing projects and tasks.
 - **Voting:** Developers can vote on differ
@@ -25,17 +25,17 @@ People/Companies with good on-chain reputation on Lens Protocol can create their
 
 ### Visa: B2B Payments
 
-- **Admins of on-chain communities(DAOs):** LensOnyx can be used by existing Web3 companies to scale their developer community.
+- **Admins of on-chain communities(DAOs):** OnyxDAO can be used by existing Web3 companies to scale their developer community.
 - **Tools for Better Developer Experience**
 
 ### Lens Protocol
 
-- **On-chain Reputation:** People/Companies with certain number of stats on Lens Protocol(followers, collects, publications) can create communities on LensOnyx
+- **On-chain Reputation:** People/Companies with certain number of stats on Lens Protocol(followers, collects, publications) can create communities on OnyxDAO
 - **Lens Protocol Social Graph:** Developers can complete their assignments and can post using Lens Protocol
 
 ### Magic SDK
 
-- **Seamless Onboarding:** With just a single click of a button, users can easily onboard onto the LensOnyx platform and can access developer communities. Web2 Developers can use the social login feature of Magic SDK and can hold Verifiable Credentials in their smart contract accounts.
+- **Seamless Onboarding:** With just a single click of a button, users can easily onboard onto the OnyxDAO platform and can access developer communities. Web2 Developers can use the social login feature of Magic SDK and can hold Verifiable Credentials in their smart contract accounts.
 
 ### zkSync
 
