@@ -142,7 +142,7 @@ function Home() {
                         onClick={getOnyxCredentials}
                         className="btn btn-neutral"
                       >
-                        Get onyx credentials and enter the LensDao
+                        Get onyx credentials and enter the OnyxDao
                       </button>
                     </div>
                   ) : (
