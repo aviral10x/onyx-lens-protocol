@@ -149,7 +149,7 @@ function Nav() {
       >
         <Link href="/" className="mr-5 flex items-center">
           <IconComponent className="opacity-85" size={19} />
-          <p className={`ml-2 mr-4 text-lg font-semibold`}>lenspwa</p>
+          <p className={`ml-2 mr-4 text-lg font-semibold`}>OnyxDao</p>
         </Link>
         <Link
           href="/vote"
