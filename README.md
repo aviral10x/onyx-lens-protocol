@@ -46,14 +46,6 @@ People/Companies with good on-chain reputation on Lens Protocol can create their
 
 **Signing Up**: Participants and Developers can sign in using Magic users using magic link and Biconomy Bundler and Paymaster,which creates a smart contract account for the user.
 
-**Onboarding**: We onboard companies by simply taking their details like name, addrs, taxNo., RegistrationNo., etc. and store it in firebase(for now). Once it is stored we allow the user to generate verifiable credentials and create a passcode which stores Signed JWT in an encrypted formed in the Secure local storage & will later be used to verify thier credentials. The Unsigend VCs are being stored on Firebase for records
-
-**Invoice**: Here, the user can the invoices that are created for them and pay them using Biconomy Gasless Transactions and can even create invoices for other business that they deal with to request payments. We show the recepeint business data like there Score , credentials and badged to build trust and imnprove transparency
-
-**Transactions**: Here, user can see all past payments.
-
-**VPs**: User can generate VPs here using the Onyx SSI SDK, that ensures more creditibility to the company, and can be used easily to provide a proof to recieve payments. Verification happens on the backend Server that handles the API to verify Presentation JWT , verify Credential JWTs , verify vailidity of Schema , Expiry and revocation status
-
 ## Images
 
 ## Links
