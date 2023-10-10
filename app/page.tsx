@@ -69,7 +69,7 @@ function Home() {
     );
 
     console.log(signedVc);
-    window.alert(`Your Signed VC ${signedVc}`)
+    window.alert(`Your Signed VC ${signedVc}`);
 
     console.log("\nSaving signed VC JWT\n");
   };
@@ -123,14 +123,15 @@ function Home() {
                       className="rounded w-[200px]"
                     />
                   )}
-                  <h3 className="font-bold text-lg">
-                    <span>
-                      You have&nbsp;
-                      {profile?.stats.totalFollowers} followers
-                    </span>
-                  </h3>
+
                   {followers > 2 ? (
                     <div>
+                      <h3 className="font-bold text-lg">
+                        <span>
+                          You have&nbsp;
+                          {profile?.stats.totalFollowers} followers
+                        </span>
+                      </h3>
                       <p className="py-4">
                         You are eligble to get onyx credentials
                       </p>
