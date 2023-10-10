@@ -163,16 +163,9 @@ function Nav() {
         >
           <p>Submit your Buidl</p>
         </Link>
-        {wallet && (
-          <Link
-            href="/vote"
-            className={`mr-5 text-sm ${pathname !== "/vote" && "opacity-60"}`}
-          >
-            <p>Profile</p>
-          </Link>
-        )}
+       
         <Link
-          href="/onyx"
+          href="/"
           className={`mr-5 text-sm ${pathname !== "/" && "opacity-50"}`}
         >
           <p>Onyx</p>
