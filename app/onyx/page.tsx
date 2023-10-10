@@ -25,6 +25,7 @@ interface PageProps {
 }
 function Home() {
   const { data: profile } = useActiveProfile();
+  const followers = profile?.stats.totalFollowers;
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const getOnyxCredentials = async () => {
@@ -127,16 +128,23 @@ function Home() {
                       {profile?.stats.totalFollowers} followers
                     </span>
                   </h3>
-                  <p className="py-4">
-                    You are eligble to get onyx credentials
-                  </p>
-
-                  <button
-                    onClick={getOnyxCredentials}
-                    className="btn btn-neutral"
-                  >
-                    Get onyx credentials and enter the LensDao
-                  </button>
+                  {followers > 2 ? (
+                    <div>
+                      <p className="py-4">
+                        You are eligble to get onyx credentials
+                      </p>
+                      <button
+                        onClick={getOnyxCredentials}
+                        className="btn btn-neutral"
+                      >
+                        Get onyx credentials and enter the LensDao
+                      </button>
+                    </div>
+                  ) : (
+                    <p className="py-4">
+                      You are not eligble to get onyx credentials
+                    </p>
+                  )}
                 </div>
                 <form method="dialog" className="modal-backdrop"></form>
               </dialog>
