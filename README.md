@@ -1,7 +1,8 @@
 ## OnyxDAO
 
-OnyxDAO is a platform that helps people create on-chain developer communities on Lens Protocol and leverages Onyx for Verifiable Credentials.
-People/Companies with good on-chain reputation on Lens Protocol can create their communities using OnyxDAO. Participants in these on-chain communities will receive verifiable credentials that are issued using Onyx. Participants will have to collect these Verifiable Credentials to unlock other benefits.
+OnyxDAO is a revolutionary reward program for DAO and its users that helps web2 as well as web3 users to take part and submit their builds for their community by verifying their Lens handle (for web3 users) or log in easily using Magic social logins (without a need to have a EOA or a wallet for the same) and obtain Onyx Verifiable Credentials.
+People/Companies with good on-chain reputation on Lens Protocol or if they are logged in using Magic Social Logins can get their onyx verifiable credentials using OnyxDAO. Participants will have to collect these Verifiable Credentials to unlock other benefits.
+They can submit or/and vote the projects on chain by verifying their onyx verifiable presentations on zksync era testnet with their gas fees sponsored by the platform using zkSync Era's Paymaster  
 
 ## Problem
 
