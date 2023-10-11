@@ -4,6 +4,9 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { ModeToggle } from "@/components/dropdown";
+import { Wallet, providers, ethers } from "ethers";
+import { Magic } from "magic-sdk";
+
 import {
   ChevronRight,
   Tally3 as IconComponent,
@@ -64,11 +67,16 @@ function Nav() {
   const { open, close } = useWeb3Modal();
   const { address, isConnected } = useAccount();
   const { data: wallet } = useActiveProfile();
+  const [loading, setLoading] = useState<boolean>(false);
+  const [provider, setProvider] = useState<ethers.providers.Provider | null>(
+    null
+  );
 
   const { disconnectAsync, disconnect } = useDisconnect();
   const { connectAsync } = useConnect({
     connector: new InjectedConnector(),
   });
+  const [magicLink, setMagicLink] = useState<any>();
 
   useEffect(() => {
     if (!wallet && address && !isManuallyConnected) {
@@ -133,6 +141,31 @@ function Nav() {
     });
   }
 
+  useEffect(() => {
+    if (!magicLink) {
+      const magic = new Magic(process.env.NEXT_PUBLIC_MAGIC_API_KEY as string, {
+        network: {
+          rpcUrl: "https://rpc-mumbai.maticvigil.com",
+          chainId: 80001,
+        },
+      });
+      setMagicLink(magic);
+    }
+  }, []);
+  const connect = async () => {
+    try {
+      setLoading(true);
+      await magicLink.wallet.connectWithUI();
+      const web3Provider = new ethers.providers.Web3Provider(
+        magicLink.rpcProvider,
+        "any"
+      );
+      setProvider(web3Provider);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <nav
       className="
@@ -149,7 +182,7 @@ function Nav() {
       >
         <Link href="/" className="mr-5 flex items-center">
           <IconComponent className="opacity-85" size={19} />
-          <p className={`ml-2 mr-4 text-lg font-semibold`}>OnyxDao</p>
+          <p className={`ml-2 mr-4 text-lg font-semibold`}>Onyx</p>
         </Link>
         <Link
           href="/vote"
@@ -163,7 +196,7 @@ function Nav() {
         >
           <p>Submit your Buidl</p>
         </Link>
-       
+
         <Link
           href="/"
           className={`mr-5 text-sm ${pathname !== "/" && "opacity-50"}`}
@@ -178,6 +211,15 @@ function Nav() {
         pl-4 pb-3 sm:p-0
       "
       >
+        {
+          <Button
+            onClick={() => connect()}
+            variant="secondary"
+            className="mr-2"
+          >
+            Create Account with Magic
+          </Button>
+        }
         {!address && !wallet && (
           <Button onClick={login} variant="secondary" className="mr-2">
             Connect Wallet
